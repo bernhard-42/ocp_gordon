@@ -1,11 +1,11 @@
 import pytest
 import numpy as np
-from OCP.gp import gp_Pnt
-from OCP.collections import (
-    HArray1_gp_Pnt as TColgp_HArray1OfPnt,
+from ocp_gordon._occt import (
     Array1_gp_Pnt as TColgp_Array1OfPnt,
+    Geom_BSplineCurve,
+    gp_Pnt,
+    HArray1_gp_Pnt as TColgp_HArray1OfPnt,
 )
-from OCP.Geom import Geom_BSplineCurve
 
 from ocp_gordon.internal.points_to_bspline_interpolation import (
     PointsToBSplineInterpolation,

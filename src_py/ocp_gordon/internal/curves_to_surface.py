@@ -6,18 +6,16 @@ a set of compatible B-spline curves.
 """
 
 
-from OCP.Geom import (
+from .._occt import (
+    Array1_double,
+    Array1_int,
+    Array2_gp_Pnt,
     Geom_BSplineCurve,
     Geom_BSplineSurface,
     Geom_Curve,
     Geom_TrimmedCurve,
-)
-from OCP.GeomConvert import GeomConvert
-from OCP.collections import (
-    Array2_gp_Pnt,
+    GeomConvert,
     HArray1_gp_Pnt,
-    Array1_int,
-    Array1_double,
 )
 
 from .bspline_algorithms import BSplineAlgorithms

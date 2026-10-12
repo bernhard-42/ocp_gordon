@@ -11,28 +11,30 @@ import enum  # Import enum module
 import math
 
 import numpy as np
-from OCP.BSplCLib import BSplCLib
-from OCP.Geom import (
+from .._occt import (
+    Array1_double,
+    Array1_gp_Pnt,
+    Array1_int,
+    Array2_gp_Pnt,
+    BSplCLib,
+    eval_bspline_basis,
+    Geom2dAPI_Interpolate,
+    Geom2dAPI_ProjectPointOnCurve,
     Geom_BSplineCurve,
     Geom_BSplineSurface,
     Geom_Curve,
     Geom_TrimmedCurve,
-)
-from OCP.Geom2dAPI import Geom2dAPI_Interpolate, Geom2dAPI_ProjectPointOnCurve
-from OCP.GeomAbs import GeomAbs_C2
-from OCP.GeomConvert import GeomConvert, GeomConvert_ApproxCurve
-from OCP.gp import gp_Pnt, gp_Pnt2d
-from OCP.math import math_Matrix
-from OCP.Precision import Precision
-from OCP.collections import (
-    Array1_gp_Pnt,
-    Array2_gp_Pnt,
+    GeomAbs_C2,
+    GeomConvert,
+    GeomConvert_ApproxCurve,
+    gp_Pnt,
+    gp_Pnt2d,
+    HArray1_double,
     HArray1_gp_Pnt,
     HArray1_gp_Pnt2d,
-    Array1_int,
-    Array1_double,
     HArray1_int,
-    HArray1_double,
+    math_Matrix,
+    Precision,
 )
 
 from .approx_result import ApproxResult
@@ -943,9 +945,7 @@ class BSplineAlgorithms:
             span_idx, _ = BSplCLib.LocateParameter_s(
                 degree, knots, param_val, False, degree + 1, knots.Length() - degree
             )
-            BSplCLib.EvalBsplineBasis_s(
-                deriv_order, degree + 1, knots, param_val, int(), bspl_basis
-            )
+            eval_bspline_basis(deriv_order, degree + 1, knots, param_val, bspl_basis)
             for j in range(degree + 1):
                 col_idx = span_idx - degree - 1 + j
                 if 0 <= col_idx < n_cp:  # Ensure index is within bounds

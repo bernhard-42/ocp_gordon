@@ -8,13 +8,15 @@ Created: 2019-04-24 Martin Siggel <Martin.Siggel@dlr.de>
 import math
 
 import numpy as np
-from OCP.BSplCLib import BSplCLib  # For KnotSequence
-from OCP.Geom import Geom_BSplineCurve, Geom_Curve
-from OCP.gp import gp_Pnt, gp_Vec
-from OCP.collections import (
+from .._occt import (
+    Array1_double,
     Array1_gp_Pnt,
     Array1_int,
-    Array1_double,
+    BSplCLib,
+    Geom_BSplineCurve,
+    Geom_Curve,
+    gp_Pnt,
+    gp_Vec,
 )
 
 from .approx_result import ApproxResult

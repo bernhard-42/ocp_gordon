@@ -1,7 +1,9 @@
 import pytest
-from OCP.Geom import Geom_BSplineCurve
-from OCP.collections import Array1_gp_Pnt as TColgp_Array1OfPnt
-from OCP.gp import gp_Pnt
+from ocp_gordon._occt import (
+    Array1_gp_Pnt as TColgp_Array1OfPnt,
+    Geom_BSplineCurve,
+    gp_Pnt,
+)
 import math
 
 from ocp_gordon.internal.bspline_approx_interp import BSplineApproxInterp

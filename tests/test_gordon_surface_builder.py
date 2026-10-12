@@ -1,12 +1,13 @@
 import pytest
 
-from OCP.gp import gp_Pnt
-from OCP.collections import (
-    Array1_gp_Pnt as TColgp_Array1OfPnt,
+from ocp_gordon._occt import (
     Array1_double as TColStd_Array1OfReal,
+    Array1_gp_Pnt as TColgp_Array1OfPnt,
     Array1_int as TColStd_Array1OfInteger,
+    Geom_BSplineCurve,
+    Geom_BSplineSurface,
+    gp_Pnt,
 )
-from OCP.Geom import Geom_BSplineCurve, Geom_BSplineSurface
 
 from ocp_gordon.internal.gordon_surface_builder import GordonSurfaceBuilder
 from ocp_gordon.internal.error import error, ErrorCode

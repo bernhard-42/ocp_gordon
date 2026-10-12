@@ -1,12 +1,12 @@
 
 import numpy as np
 import pytest
-from OCP.Geom import Geom_BSplineCurve
-from OCP.gp import gp_Pnt
-from OCP.collections import (
+from ocp_gordon._occt import (
+    Array1_double as TColStd_Array1OfReal,
     Array1_gp_Pnt as TColgp_Array1OfPnt,
     Array1_int as TColStd_Array1OfInteger,
-    Array1_double as TColStd_Array1OfReal,
+    Geom_BSplineCurve,
+    gp_Pnt,
 )
 
 # Import the CurveNetworkSorter from the internal module

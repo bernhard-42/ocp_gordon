@@ -1,6 +1,6 @@
-# Gordon Surface Library for CadQuery's OCP
+# Gordon Surface Library for CadQuery's OCP and nanocct
 
-This library provides a Python implementation for creating Gordon surfaces, a method for interpolating a network of curves to generate a smooth surface. It is designed to be compatible with CadQuery's OCP and leverages B-spline mathematics.
+This library provides a Python implementation for creating Gordon surfaces, a method for interpolating a network of curves to generate a smooth surface. It is designed to be compatible with CadQuery's OCP and with nanocct and leverages B-spline mathematics.
 
 The implementation is written entirely in Python and is adapted from the original C++ code in [`occ_gordon`](https://github.com/rainman110/occ_gordon)
 
@@ -11,6 +11,7 @@ It is currently used by [`build123d`](https://github.com/gumyr/build123d), but c
 - Gordon surface interpolation from profile and guide curves.
 - Compatibility with B-spline representations.
 - Integration with CadQuery's OCP (OpenCASCADE Python) for geometric primitives.
+- Integration with nanocct (OpenCASCADE Python) for geometric primitives.
 
 ## Installation
 
@@ -23,6 +24,7 @@ pip install ocp_gordon
 ## Dependencies
 
 - CadQuery OCP 8.x (`cadquery-ocp-novtk`)
+- nanocct 8.x (`nanocct`)
 - NumPy
 - SciPy
 

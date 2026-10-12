@@ -3,15 +3,17 @@ import numpy as np
 import pytest
 
 # Import actual OCP dependencies
-from OCP.Geom import Geom_BSplineCurve, Geom_BSplineSurface
-from OCP.GeomAbs import GeomAbs_Shape
-from OCP.GeomAPI import GeomAPI_Interpolate, GeomAPI_PointsToBSpline
-from OCP.gp import gp_Pnt
-from OCP.collections import (
-    Array1_gp_Pnt as TColgp_Array1OfPnt,
-    HArray1_gp_Pnt as TColgp_HArray1OfPnt,
-    Array1_int as TColStd_Array1OfInteger,
+from ocp_gordon._occt import (
     Array1_double as TColStd_Array1OfReal,
+    Array1_gp_Pnt as TColgp_Array1OfPnt,
+    Array1_int as TColStd_Array1OfInteger,
+    Geom_BSplineCurve,
+    Geom_BSplineSurface,
+    GeomAbs_Shape,
+    GeomAPI_Interpolate,
+    GeomAPI_PointsToBSpline,
+    gp_Pnt,
+    HArray1_gp_Pnt as TColgp_HArray1OfPnt,
 )
 
 # Import actual internal dependencies

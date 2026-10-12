@@ -5,7 +5,9 @@ SPDX-FileCopyrightText: 2020 German Aerospace Center (DLR)
 Created: 2020-07-15 Martin Siggel <Martin.Siggel@dlr.de>
 """
 
-from OCP.Geom import Geom_BSplineCurve
+from .._occt import (
+    Geom_BSplineCurve,
+)
 
 class ApproxResult:
     """

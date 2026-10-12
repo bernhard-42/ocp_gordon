@@ -6,8 +6,12 @@ as the entry point for the Gordon surface interpolation algorithm.
 """
 
 import numpy as np
-from OCP.Geom import Geom_BSplineCurve, Geom_BSplineSurface, Geom_Curve
-from OCP.Precision import Precision
+from .._occt import (
+    Geom_BSplineCurve,
+    Geom_BSplineSurface,
+    Geom_Curve,
+    Precision,
+)
 
 from .bspline_algorithms import BSplineAlgorithms
 from .curve_network_sorter import (

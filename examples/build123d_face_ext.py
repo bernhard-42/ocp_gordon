@@ -2,12 +2,17 @@
 # This file extends the class build123d.Face to include gorden_surface()
 
 from build123d import Edge, Face, ShapeList  # type: ignore
-from OCP.Geom import Geom_Curve, Geom_BSplineCurve, Geom_BSplineSurface
-from OCP.GeomConvert import GeomConvert
-from OCP.BRepBuilderAPI import BRepBuilderAPI_MakeEdge, BRepBuilderAPI_MakeFace
-from OCP.BRep import BRep_Tool
-from OCP.TopoDS import TopoDS_Face
-from OCP.Precision import Precision
+from ocp_gordon._occt import (
+    BRep_Tool,
+    BRepBuilderAPI_MakeEdge,
+    BRepBuilderAPI_MakeFace,
+    Geom_BSplineCurve,
+    Geom_BSplineSurface,
+    Geom_Curve,
+    GeomConvert,
+    Precision,
+    TopoDS_Face,
+)
 
 # Import our Gordon interpolation module
 import sys

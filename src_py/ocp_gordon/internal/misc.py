@@ -3,14 +3,15 @@ from pathlib import Path
 from typing import cast
 
 import numpy as np
-from OCP.Geom import Geom_BSplineCurve, Geom_BSplineSurface
-from OCP.GeomConvert import GeomConvert_CompCurveToBSplineCurve
-from OCP.gp import gp_Pnt
-from OCP.Precision import Precision
-from OCP.collections import (
+from .._occt import (
+    Array1_double,
     Array1_gp_Pnt,
     Array1_int,
-    Array1_double,
+    Geom_BSplineCurve,
+    Geom_BSplineSurface,
+    GeomConvert_CompCurveToBSplineCurve,
+    gp_Pnt,
+    Precision,
 )
 from scipy.optimize import minimize
 

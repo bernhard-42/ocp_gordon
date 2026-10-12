@@ -1,23 +1,24 @@
 import math
 
 import pytest
-from OCP.Geom import (
+from ocp_gordon._occt import (
+    Array1_double as TColStd_Array1OfReal,
+    Array1_gp_Pnt as TColgp_Array1OfPnt,
+    Array1_int as TColStd_Array1OfInteger,
+    Array2_gp_Pnt as TColgp_Array2OfPnt,
     Geom_BSplineCurve,
     Geom_BSplineSurface,
     Geom_Circle,
     Geom_Curve,
     Geom_Ellipse,
     Geom_TrimmedCurve,
-)
-from OCP.GeomAPI import GeomAPI_ProjectPointOnCurve
-from OCP.gp import gp_Ax2, gp_Dir, gp_Pnt
-from OCP.Precision import Precision
-from OCP.collections import (
-    Array1_gp_Pnt as TColgp_Array1OfPnt,
-    Array2_gp_Pnt as TColgp_Array2OfPnt,
+    GeomAPI_ProjectPointOnCurve,
+    gp_Ax2,
+    gp_Dir,
+    gp_Pnt,
     HArray1_gp_Pnt as TColgp_HArray1OfPnt,
+    Precision,
 )
-from OCP.collections import Array1_int as TColStd_Array1OfInteger, Array1_double as TColStd_Array1OfReal
 
 from ocp_gordon.internal.bspline_algorithms import (
     BSplineAlgorithms,

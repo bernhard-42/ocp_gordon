@@ -5,12 +5,13 @@ This module implements the Gordon surface construction algorithm
 that combines skinning surfaces and tensor product surfaces.
 """
 
-from OCP.Geom import Geom_BSplineCurve, Geom_BSplineSurface
-from OCP.gp import gp_Pnt
-from OCP.collections import (
-    Array2_gp_Pnt,
-    Array1_int,
+from .._occt import (
     Array1_double,
+    Array1_int,
+    Array2_gp_Pnt,
+    Geom_BSplineCurve,
+    Geom_BSplineSurface,
+    gp_Pnt,
 )
 
 from .bspline_algorithms import BSplineAlgorithms, SurfaceDirection

@@ -14,7 +14,10 @@ Created: 2017 Martin Siggel <Martin.Siggel@dlr.de>
 
 
 import numpy as np
-from OCP.Geom import Geom_BSplineCurve, Geom_Curve
+from .._occt import (
+    Geom_BSplineCurve,
+    Geom_Curve,
+)
 
 from .error import error
 

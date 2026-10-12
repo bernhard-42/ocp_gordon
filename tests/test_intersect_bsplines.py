@@ -8,12 +8,19 @@ using recursive subdivision and optimization methods.
 import math
 
 import pytest
-from OCP.Geom import Geom_BSplineCurve, Geom_Circle
-from OCP.GeomAbs import GeomAbs_Shape
-from OCP.GeomAPI import GeomAPI_PointsToBSpline
-from OCP.GeomConvert import GeomConvert
-from OCP.gp import gp_Ax1, gp_Ax2, gp_Dir, gp_Pnt, gp_Trsf
-from OCP.collections import Array1_gp_Pnt as TColgp_Array1OfPnt
+from ocp_gordon._occt import (
+    Array1_gp_Pnt as TColgp_Array1OfPnt,
+    Geom_BSplineCurve,
+    Geom_Circle,
+    GeomAbs_Shape,
+    GeomAPI_PointsToBSpline,
+    GeomConvert,
+    gp_Ax1,
+    gp_Ax2,
+    gp_Dir,
+    gp_Pnt,
+    gp_Trsf,
+)
 
 # Import the module to test
 from ocp_gordon.internal.intersect_bsplines import (

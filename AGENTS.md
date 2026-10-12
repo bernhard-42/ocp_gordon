@@ -9,7 +9,7 @@
 - Examples: `examples/`
 - Separate C++ reference/source: `src_cpp/`
 - Supported Python: `>=3.11, <3.15`
-- Runtime dependencies: `cadquery_ocp_proxy`, NumPy, SciPy
+- Runtime dependencies: NumPy, SciPy, and an OCCT binding: OCP (`.[ocp]`) or nanocct (`.[nanocct]`)
 - Test dependencies: `pytest`, `cadquery_ocp_novtk`
 
 ## Public API
@@ -53,7 +53,7 @@ Important modules include:
 Install the test environment with:
 
 ```bash
-uv pip install .[test]
+uv pip install .[ocp]      # or .[nanocct]
 ```
 
 Run the suite with:

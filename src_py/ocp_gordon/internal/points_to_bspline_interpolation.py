@@ -7,16 +7,17 @@ for node and knot selection.
 """
 
 import numpy as np
-from OCP.Geom import Geom_BSplineCurve, Geom_TrimmedCurve
-from OCP.GeomConvert import GeomConvert
-from OCP.BSplCLib import BSplCLib
-from OCP.collections import (
-    Array1_gp_Pnt,
-    HArray1_gp_Pnt,
+from .._occt import (
     Array1_double,
+    Array1_gp_Pnt,
     Array1_int,
+    BSplCLib,
+    Geom_BSplineCurve,
+    Geom_TrimmedCurve,
+    GeomConvert,
+    gp_Pnt,
+    HArray1_gp_Pnt,
 )
-from OCP.gp import gp_Pnt
 
 from .bspline_algorithms import BSplineAlgorithms
 
